@@ -1,50 +1,101 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a personal portfolio website built using Vite, React, Typescript and some CSS.
+The site showcases my development skills, projects, and contact information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+-   [Project Setup](#project-setup)
+-   [Installation](#installation)
+-   [Running the Project](#running-the-project)
+-   [Building the Project](#building-the-project)
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Project Setup
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+This project uses **Vite** to quickly set up the development environment for a React application with TypeScript.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Requirements
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+-   [Node.js](https://nodejs.org/) (v16 or higher recommended)
+-   [npm](https://npmjs.com/) or [Yarn](https://yarnpkg.com/)
+
+---
+
+## Installation
+
+1. **Clone the repository**:
+
+    ```bash
+    git clone <repository-url>
+    cd <project-folder>
+    ```
+
+2. **Install dependencies**:
+
+    Use **npm** to install the necessary dependencies:
+
+    ```bash
+    npm install
+    ```
+
+    Or if you're using **Yarn**:
+
+    ```bash
+    yarn install
+    ```
+
+---
+
+## Running the Project
+
+To start the development server and run the app locally:
+
+1. Run the following command:
+
+    ```bash
+    npm run dev  # Using Vite
+    ```
+
+    This will start the server, and you can open your browser and visit `http://localhost:3000` to see the app in action.
+
+    If you're using **Yarn**:
+
+    ```bash
+    yarn dev
+    ```
+
+---
+
+## Building the Project
+
+To build the project for production:
+
+1. Run the following command to create an optimized build in the `dist` folder:
+
+    ```bash
+    npm run build
+    ```
+
+    If you're using **Yarn**:
+
+    ```bash
+    yarn build
+    ```
+
+2. After building, you can preview the production version locally:
+
+    ```bash
+    npm run preview  # Vite preview command
+    ```
+
+    Or with **Yarn**:
+
+    ```bash
+    yarn preview
+    ```
