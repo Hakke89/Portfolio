@@ -1,9 +1,14 @@
 import "./App.css";
+import Hero from "./components/Hero";
+import Navigation from "./components/Navigation";
+import About from "./components/About";
 
 function App() {
     return (
         <>
-            <h1>Hannes Vandelaer</h1>
+            <Hero />
+            <Navigation />
+            <About />
         </>
     );
 }
