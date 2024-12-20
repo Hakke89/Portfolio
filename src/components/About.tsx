@@ -1,10 +1,11 @@
-import "/about.css";
+import "../styles/About.css";
 
 function About(): JSX.Element {
     return (
-        <div>
+        <section className="about-container" id="about">
             <h1>About</h1>
-        </div>
+            <p>About content goes here</p>
+        </section>
     );
 }
 
