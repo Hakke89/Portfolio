@@ -18,11 +18,11 @@ The site showcases my development skills, projects, and contact information.
 
 ## Project Setup
 
-This project uses **Vite** to quickly set up the development environment for a React application with TypeScript.
+This project uses Vite to quickly set up the development environment for a React application with TypeScript.
 
 ### Requirements
 
--   [Node.js](https://nodejs.org/) (v16 or higher recommended)
+-   [Node.js](https://nodejs.org/)
 -   [npm](https://npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
 ---
