@@ -1,0 +1,28 @@
+.navigation-bar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(24, 24, 24, 0.982);
+    z-index: 10;
+}
+
+.navigation {
+    display: flex;
+    justify-content: end;
+    box-shadow: 0 2rem 4rem 0 rgba(79, 79, 79, 0.553);
+}
+
+.nav-item {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+
+    margin: 0.5rem 3.5rem 0.5rem 0;
+}
+
+.nav-item:hover {
+    color: rgb(29, 114, 129);
+}
+
+.active {
+    color: rgb(29, 114, 129);
+}

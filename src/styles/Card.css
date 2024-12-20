@@ -1,0 +1,45 @@
+.single-card-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "info image"
+    ;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 1rem 1rem 2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+}
+
+.card-info-container {
+    grid-area: info;
+    z-index: 3;
+}
+
+.card-image-container {
+    grid-area: image;
+    margin-top: 1rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 2rem -2rem 0 0 rgb(29, 114, 129);
+    z-index: 1;
+}
+
+.card-link {
+    padding-top: 1rem;
+
+}
+
+@media (max-width: 600px) {
+    .single-card-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "info"
+            "image"
+        ;
+    }
+}

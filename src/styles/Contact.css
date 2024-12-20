@@ -1,0 +1,103 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    gap: 0.5em;
+    width: 500px;
+}
+
+.form-field {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.8em;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 8em;
+}
+
+.form-error {
+    font-family: inherit;
+    font-size: 1.2em;
+    color: white;
+}
+
+.form-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.submit-button {
+    position: relative;
+
+    font-family: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    padding: 0.8em 3em 0.8em 3em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer
+}
+
+.background-transform {
+    display: flex;
+    justify-content: center;
+
+}
+
+.background-transform::after {
+    position: absolute;
+    content: '';
+    height: 0.2em;
+    background-color: #009999;
+    width: 100%;
+    bottom: 1px;
+    transform-origin: bottom;
+    transition: all 0.25s;
+    z-index: -1;
+}
+
+.background-transform:hover {
+    color: #1a1a1a
+}
+
+.background-transform:hover::after {
+    height: 100%
+}
+
+@media (max-width: 700px) {
+    .contact-form {
+        width: 400px;
+    }
+}
+
+@media (max-width: 470px) {
+    .contact-form {
+        width: 330px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact-form {
+        width: 260px;
+    }
+}
