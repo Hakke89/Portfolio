@@ -4,26 +4,42 @@ function Card({
     title,
     description,
     img,
-    link,
+    projectLink,
+    codeLink,
 }: {
     title: string;
     description: string;
     img: string;
-    link: string;
+    projectLink: string;
+    codeLink: string;
 }): JSX.Element {
     return (
         <div className="single-card-container">
             <div className="card-info-container">
                 <h2 className="card-title">{title}</h2>
+
                 <p>{description}</p>
-                <p className="card-link">
-                    <a href={link} target="_blank">
-                        More info
+                <div className="link-container background-transform">
+                    <a
+                        href={projectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Live Project
                     </a>
-                </p>
+                </div>
+                <div className="link-container background-transform">
+                    <a
+                        href={codeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Source Code
+                    </a>
+                </div>
             </div>
             <div className="card-image-container">
-                <a href={link} target="_blank">
+                <a href={projectLink} target="_blank" rel="noopener noreferrer">
                     <img src={img} alt={title} />
                 </a>
             </div>

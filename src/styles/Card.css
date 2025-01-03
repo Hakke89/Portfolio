@@ -10,6 +10,8 @@
     margin: 1rem 1rem 2rem;
     padding: 0.5rem 1rem;
     border: 1px solid white;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 10px;
+    /* cursor: pointer; */
 }
 
 .card-info-container {
@@ -29,9 +31,44 @@ img {
     z-index: 1;
 }
 
-.card-link {
-    padding-top: 1rem;
+.link-container {
+    display: flex;
+    position: relative;
+    width: fit-content;
 
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    padding: .5em .5em .5em .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    cursor: pointer
+}
+
+.background-transform::after {
+    position: absolute;
+    content: '';
+    height: 0.2em;
+    background-color: #009999;
+    bottom: 1px;
+    transform-origin: bottom;
+    transition: all 0.25s;
+    z-index: -1;
+}
+
+.background-transform:hover {
+    color: #1a1a1a
+}
+
+.background-transform:hover::after {
+    height: 100%
 }
 
 @media (max-width: 600px) {
