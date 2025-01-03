@@ -6,21 +6,25 @@ function Projects(): JSX.Element {
     const projects = [
         {
             title: "Treasure hunter",
-            description: "project made with html, css and javascript",
+            description:
+                "a small pirate theme game made with html, css and javascript",
             img: "https://picsum.photos/400/300",
-            link: "https://github.com/Hakke89",
+            projectLink: "https://netlify.com",
+            codeLink: "https://github.com/Hakke89",
         },
         {
-            title: "Project 2",
-            description: "project made with html, css and javascript",
+            title: "Pixel art",
+            description: "javascript project for drawing pixel art",
             img: "https://picsum.photos/400/300",
-            link: "https://github.com/Hakke89",
+            projectLink: "https://netlify.com",
+            codeLink: "https://github.com/Hakke89",
         },
         {
             title: "Project 3",
             description: "project made with html, css and javascript",
             img: "https://picsum.photos/400/300",
-            link: "https://github.com/Hakke89",
+            projectLink: "https://netlify.com",
+            codeLink: "https://github.com/Hakke89",
         },
     ];
 
