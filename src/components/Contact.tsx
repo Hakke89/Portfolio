@@ -25,7 +25,8 @@ function Contact(): JSX.Element {
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        // to do validate
+        // TODO validation
+
         event.preventDefault();
         console.log(form);
         alert(
