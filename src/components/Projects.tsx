@@ -10,21 +10,22 @@ function Projects(): JSX.Element {
         {
             title: "Treasure Hunter",
             description:
-                "a small pirate theme game made with html, css and javascript",
+                "A pirate theme game made with html, css and javascript",
             img: image1,
             projectLink: "https://treasurehunter-hv.netlify.app",
             codeLink: "https://github.com/Hakke89/treasurehunter",
         },
         {
             title: "Pixel Art",
-            description: "javascript project for drawing pixel art",
+            description: "Javascript project for drawing pixel art",
             img: "https://picsum.photos/400/300",
             projectLink: "https://netlify.com",
             codeLink: "https://github.com/Hakke89/",
         },
         {
             title: "Sword Warrior",
-            description: "project made in Typscript with Phaser and Vite",
+            description:
+                "A small project made in Typscript with Phaser and Vite",
             img: image3,
             projectLink: "https://netlify.com",
             codeLink: "https://github.com/Hakke89",
