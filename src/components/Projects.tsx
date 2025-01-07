@@ -1,28 +1,31 @@
 import "../styles/Projects.css";
 import Card from "./Card";
+import image1 from "../assets/treasurehunter.png";
+import image2 from "../assets/pixelart.png";
+import image3 from "../assets/swordwarrior.png";
 
 function Projects(): JSX.Element {
-    // array of projects with title, description and image
+    // array of projects with title, description, image, project link, and code link
     const projects = [
         {
-            title: "Treasure hunter",
+            title: "Treasure Hunter",
             description:
                 "a small pirate theme game made with html, css and javascript",
-            img: "https://picsum.photos/400/300",
-            projectLink: "https://netlify.com",
-            codeLink: "https://github.com/Hakke89",
+            img: image1,
+            projectLink: "https://treasurehunter-hv.netlify.app",
+            codeLink: "https://github.com/Hakke89/treasurehunter",
         },
         {
-            title: "Pixel art",
+            title: "Pixel Art",
             description: "javascript project for drawing pixel art",
             img: "https://picsum.photos/400/300",
             projectLink: "https://netlify.com",
-            codeLink: "https://github.com/Hakke89",
+            codeLink: "https://github.com/Hakke89/",
         },
         {
-            title: "Project 3",
-            description: "project made with html, css and javascript",
-            img: "https://picsum.photos/400/300",
+            title: "Sword Warrior",
+            description: "project made in Typscript with Phaser and Vite",
+            img: image3,
             projectLink: "https://netlify.com",
             codeLink: "https://github.com/Hakke89",
         },
