@@ -1,6 +1,17 @@
 import "../styles/Navigation.css";
 import { useState, useEffect } from "react";
 
+/**
+ * The Navigation component renders a navigation bar that marks the
+ * active section on scroll.
+ *
+ * It uses the useState hook to keep track of the active section and
+ * the useEffect hook to attach a scroll event listener to the window.
+ *
+ * The component renders an unordered list with links to the sections
+ * and sets the 'active' class on the active section.
+ */
+
 function Navigation(): JSX.Element {
     const [active, setActive] = useState<string>("hero");
 
