@@ -59,6 +59,10 @@
     cursor: pointer
 }
 
+.submit-button:focus {
+    border: 3px solid white;
+}
+
 .background-transform {
     display: flex;
     justify-content: center;
