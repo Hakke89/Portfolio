@@ -42,7 +42,7 @@ function Contact(): JSX.Element {
 
     return (
         <section className="contact-container" id="contact">
-            <h1>Contact</h1>
+            <h1 className="contact-title">Contact</h1>
             <p>Contact content goes here</p>
             <form className="contact-form" onSubmit={handleSubmit}>
                 <input

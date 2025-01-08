@@ -3,5 +3,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10em;
+    margin-top: 4rem;
+}
+
+.about-title {
+    margin-top: 4rem;
+    align-self: center;
+    margin-bottom: 1rem;
 }

@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    margin-top: 8rem;
+    margin-top: 4rem;
     padding: 0 1rem;
 }
 
 .projects-title {
+    margin-top: 4rem;
     align-self: center;
     margin-bottom: 1rem;
 }
