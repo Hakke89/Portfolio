@@ -18,17 +18,17 @@ function Projects(): JSX.Element {
         {
             title: "Pixel Art",
             description: "Javascript project for drawing pixel art",
-            img: "https://picsum.photos/400/300",
-            projectLink: "https://netlify.com",
-            codeLink: "https://github.com/Hakke89/",
+            img: image2,
+            projectLink: "https://pixelart-hv.netlify.app",
+            codeLink: "https://github.com/Hakke89/pixelart",
         },
         {
             title: "Sword Warrior",
             description:
                 "A small project made in Typscript with Phaser and Vite",
             img: image3,
-            projectLink: "https://netlify.com",
-            codeLink: "https://github.com/Hakke89",
+            projectLink: "https://swordwarrior-hv.netlify.app",
+            codeLink: "https://github.com/Hakke89/swordwarrior",
         },
     ];
 

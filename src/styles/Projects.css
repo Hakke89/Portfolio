@@ -1,9 +1,11 @@
 .projects-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3rem;
-    margin-top: 4rem;
     padding: 0 1rem;
+    max-width: 80rem;
+    margin: 4rem auto;
 }
 
 .projects-title {
