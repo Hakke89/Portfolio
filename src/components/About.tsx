@@ -31,7 +31,7 @@ function About(): JSX.Element {
                     solutions and thrive in dynamic, team-focused environments.
                 </p>
 
-                <h3>Technical Skills (todo replace with logos)</h3>
+                <h3>Technical Skills</h3>
 
                 <ul>
                     <li>PHP</li>
