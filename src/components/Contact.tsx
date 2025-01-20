@@ -1,50 +1,92 @@
+import emailjs from "@emailjs/browser";
 import "../styles/Contact.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
-function Contact(): JSX.Element {
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
+/**
+ * Contact component to display contact form and handle form submission
+ * using EmailJS service.
+ *
+ * @returns {JSX.Element} Contact component
+ */
+const Contact = (): JSX.Element => {
+    const [form, setForm] = useState({ name: "", email: "", message: "" });
+    const [errorMessage, setErrorMessage] = useState("");
+    const formRef = useRef<HTMLFormElement>(null);
 
-    const handleChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    useEffect(() => {
+        if (import.meta.env.VITE_PUBLIC_KEY) {
+            emailjs.init(import.meta.env.VITE_PUBLIC_KEY);
+        } else {
+            console.error("EmailJS public key is not defined.");
+        }
+    }, []);
+
+    const handleChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setForm({
             ...form,
-            [event.target.name]: event.target.value,
+            [e.target.name]: e.target.value,
         });
     };
 
     const handleChangeTextArea = (
-        event: React.ChangeEvent<HTMLTextAreaElement>
+        e: React.ChangeEvent<HTMLTextAreaElement>
     ) => {
         setForm({
             ...form,
-            message: event.target.value,
+            message: e.target.value,
         });
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        // TODO validation
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
 
-        event.preventDefault();
-        console.log(form);
-        alert(
-            `Test fase: Message not really sent to anywhere. 
-            Form data: ${form.name}, ${form.email}, ${form.message}`
-        );
-        setForm({
-            name: "",
-            email: "",
-            message: "",
-        });
+        if (formRef.current && form.name && form.email && form.message) {
+            emailjs
+                .sendForm(
+                    import.meta.env.VITE_EMAILJS_SERVICE_ID || "",
+                    import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "",
+                    formRef.current,
+                    {
+                        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+                    }
+                )
+                .then(
+                    (result) => {
+                        console.log("SUCCESS!", result.text);
+                        alert(
+                            "Thank you for your message. I will get back to you soon."
+                        );
+                    },
+                    (error) => {
+                        console.error("FAILED", error.text);
+                        alert(
+                            "Failed to send the message. Please try again later."
+                        );
+                    }
+                );
+
+            // Reset form state after submission
+            setForm({
+                name: "",
+                email: "",
+                message: "",
+            });
+            setErrorMessage("");
+        } else {
+            // Set error message if form fields are empty
+            setErrorMessage("Please enter your name, email and message.");
+        }
     };
 
     return (
         <section className="contact-container" id="contact">
             <h1 className="contact-title">Contact</h1>
             <p>Contact content goes here</p>
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form
+                ref={formRef}
+                className="contact-form"
+                onSubmit={handleSubmit}
+            >
                 <input
                     className="form-field"
                     name="name"
@@ -70,15 +112,9 @@ function Contact(): JSX.Element {
                 ></textarea>
                 <div className="form-button-container">
                     <div className="form-error-container">
-                        {/* <div className="form-error">
-                            Please enter your name.
-                        </div>
-                        <div className="form-error">
-                            Please enter a valid email address.
-                        </div>
-                        <div className="form-error">
-                            Please enter a message.
-                        </div> */}
+                        {errorMessage && (
+                            <div className="form-error">{errorMessage}</div>
+                        )}
                     </div>
                     <button
                         className="submit-button background-transform"
@@ -90,6 +126,6 @@ function Contact(): JSX.Element {
             </form>
         </section>
     );
-}
+};
 
 export default Contact;
