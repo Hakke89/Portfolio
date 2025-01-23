@@ -33,14 +33,10 @@ function About(): JSX.Element {
 
                 <h3>Technical Skills</h3>
 
-                <ul>
-                    <li>PHP</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Laravel</li>
-                    <li>React</li>
-                </ul>
+                <p>
+                    PHP, HTML, CSS, JavaScript, Laravel, React, Git, Composer,
+                    ...
+                </p>
             </div>
         </section>
     );
