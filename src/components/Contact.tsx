@@ -81,7 +81,10 @@ const Contact = (): JSX.Element => {
     return (
         <section className="contact-container" id="contact">
             <h1 className="contact-title">Contact</h1>
-            <p>Contact content goes here</p>
+            <p>
+                Interested in working together? Want to get in touch? Send me a
+                message!
+            </p>
             <form
                 ref={formRef}
                 className="contact-form"
